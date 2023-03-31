@@ -33,7 +33,7 @@ xray_performed = input("Was X-Ray performed? (y/n): ")
 # Now, calculate bill and discount
 bill_amount, discount = calculate_bill(cleaning_performed, cavity_filling_performed, xray_performed)
 
-# This is  receipt
+# This is the receipt will print
 print("\nMelanie Dental Clinic")
 print("Receipt for patient name:", patient_name)
 print("-" * 45)
