@@ -13,3 +13,19 @@ def takeInput():
     dimes = int(input("Enter number of dimes: \n"))
     quarters = int(input("Enter number of quarters:\n "))
     return pennies, nickels, dimes, quarters
+
+
+# Function to perform calculations and display result
+def countADollar():
+    pennies, nickels, dimes, quarters = takeInput()
+    totalCent = pennies * PENNY_VALUE + nickels * NICKEL_VALUE + dimes * DIME_VALUE + quarters * QUARTER_VALUE
+    totalDollars = totalCent / PENNIES_IN_DOLLAR
+    if totalDollars > 1.0:
+        print("Sorry, the amount you entered was more than one dollar.\n:( ")
+    elif totalDollars < 1.0:
+        print("Sorry, the amount you entered was less than one dollar.\n:(")
+    else:
+        print("Congratulations!\nThe amount you entered was exactly one dollar!\nYou win the game!!/n:)")
+
+# Main program
+countADollar()
